@@ -32,7 +32,7 @@ export default function HomeComponent(props) {
   const [role, setRole] = React.useState("user");
 
   const fetchTickets = async () => {
-    const res = await axios.get("http://localhost:4000/api/ticket", {
+    const res = await axios.get("https://fyp-project-be.onrender.com/api/ticket", {
       headers,
     });
     if (res.status === 200) {
@@ -42,7 +42,7 @@ export default function HomeComponent(props) {
     }
   };
   const fetchShopItems = async () => {
-    const res = await axios.get("http://localhost:4000/api/shop", {
+    const res = await axios.get("https://fyp-project-be.onrender.com/api/shop", {
       headers,
     });
     if (res.status === 200) {

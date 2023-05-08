@@ -47,7 +47,7 @@ export default function ProfileComponent() {
 
     try {
       const res = await axios.put(
-        "http://localhost:4000/api/user/" + userId,
+        "https://fyp-project-be.onrender.com/api/user/" + userId,
         data,
         { headers }
       );
@@ -64,7 +64,7 @@ export default function ProfileComponent() {
       authorization: "Bearer " + localStorage.getItem("auth-token"),
     };
     try {
-      const res = await axios.get("http://localhost:4000/api/user/" + id, {
+      const res = await axios.get("https://fyp-project-be.onrender.com/api/user/" + id, {
         headers,
       });
       if (res.status === 200) {

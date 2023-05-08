@@ -7,7 +7,7 @@ import { TextField, Typography } from "@mui/material";
 export default function NewsComponent(props) {
   const [news, setNews] = useState([]);
   const [search, setSearch] = useState("");
-  const baseUrl = "http://localhost:4000/api/news";
+  const baseUrl = "https://fyp-project-be.onrender.com/api/news";
 
   const getNews = () => {
     const url = search ? `${baseUrl}?${search}` : baseUrl;

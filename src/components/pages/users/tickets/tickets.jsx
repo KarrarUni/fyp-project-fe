@@ -13,7 +13,7 @@ export default function TicketsComponent(props) {
   const [tickets, setTickets] = React.useState([]);
 
   const fetchTickets = async () => {
-    const res = await axios.get("http://localhost:4000/api/ticket", {
+    const res = await axios.get("https://fyp-project-be.onrender.com/api/ticket", {
       headers,
     });
     if (res.status === 200) {

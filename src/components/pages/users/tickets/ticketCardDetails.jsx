@@ -39,7 +39,7 @@ export default function TicketCardDerailsComponent() {
 
   React.useEffect(() => {
     const fetchTicketDetails = async () => {
-      const res = await axios.get(`http://localhost:4000/api/ticket/${id}`, {
+      const res = await axios.get(`https://fyp-project-be.onrender.com/api/ticket/${id}`, {
         headers: {
           authorization: "Bearer " + token,
         },

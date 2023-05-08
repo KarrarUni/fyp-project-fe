@@ -57,7 +57,7 @@ export default function AdminShowBookingsComponent() {
   };
 
   const fetchOrderDetails = async () => {
-    const res = await axios.get("http://localhost:4000/api/book/all", {
+    const res = await axios.get("https://fyp-project-be.onrender.com/api/book/all", {
       headers,
     });
     if (res.status === 200) {
@@ -73,7 +73,7 @@ export default function AdminShowBookingsComponent() {
 
   const cancelOrder = async (order) => {
     const res = await axios.post(
-      "http://localhost:4000/api/book/cancel",
+      "https://fyp-project-be.onrender.com/api/book/cancel",
       order,
       {
         headers,
@@ -89,7 +89,7 @@ export default function AdminShowBookingsComponent() {
 
   const completeOrder = async (order) => {
     const res = await axios.post(
-      "http://localhost:4000/api/book/dispatch",
+      "https://fyp-project-be.onrender.com/api/book/dispatch",
       order,
       {
         headers,
@@ -105,7 +105,7 @@ export default function AdminShowBookingsComponent() {
 
   const deleteOrder = async (order) => {
     const res = await axios.delete(
-      "http://localhost:4000/api/book/" + order._id,
+      "https://fyp-project-be.onrender.com/api/book/" + order._id,
       {
         headers,
       }

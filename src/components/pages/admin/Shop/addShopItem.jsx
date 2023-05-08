@@ -44,7 +44,7 @@ export default function AddShopFormComponent() {
     setUploading(true);
     const fileData = new FormData();
     fileData.append("file", event.target.files[0]);
-    const res = await axios.post("http://localhost:4000/api/upload", fileData, {
+    const res = await axios.post("https://fyp-project-be.onrender.com/api/upload", fileData, {
       headers: {
         authorization: "Bearer " + token,
       },
@@ -76,7 +76,7 @@ export default function AddShopFormComponent() {
 
     if (id) {
       const res = await axios.put(
-        `http://localhost:4000/api/shop/${id}`,
+        `https://fyp-project-be.onrender.com/api/shop/${id}`,
         formData,
         {
           headers: {
@@ -93,7 +93,7 @@ export default function AddShopFormComponent() {
       }
     } else {
       const res = await axios.post(
-        "http://localhost:4000/api/shop/create",
+        "https://fyp-project-be.onrender.com/api/shop/create",
         formData,
         {
           headers: {
@@ -121,7 +121,7 @@ export default function AddShopFormComponent() {
   };
 
   const fetchProductDetails = async () => {
-    const res = await axios.get(`http://localhost:4000/api/shop/${id}`, {
+    const res = await axios.get(`https://fyp-project-be.onrender.com/api/shop/${id}`, {
       headers: {
         authorization: "Bearer " + token,
       },

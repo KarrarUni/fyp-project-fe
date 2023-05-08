@@ -13,7 +13,7 @@ export default function AdminTicketsComponent() {
   const [tickets, setTickets] = React.useState([]);
 
   const fetchTickets = async () => {
-    const res = await axios.get("http://localhost:4000/api/ticket", {
+    const res = await axios.get("https://fyp-project-be.onrender.com/api/ticket", {
       headers,
     });
     if (res.status === 200) {
@@ -24,7 +24,7 @@ export default function AdminTicketsComponent() {
   const handleDelete = async (ticket) => {
     const updatedTickets = tickets.filter((t) => t._id !== ticket._id);
     const res = await axios.delete(
-      `http://localhost:4000/api/ticket/${ticket._id}`,
+      `https://fyp-project-be.onrender.com/api/ticket/${ticket._id}`,
       {
         headers,
       }

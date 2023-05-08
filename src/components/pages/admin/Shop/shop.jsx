@@ -13,7 +13,7 @@ export default function AdminShopComponent() {
   const [shopItems, setShopItems] = React.useState([]);
 
   const fetchShopItems = async () => {
-    const res = await axios.get("http://localhost:4000/api/shop", {
+    const res = await axios.get("https://fyp-project-be.onrender.com/api/shop", {
       headers,
     });
     if (res.status === 200) {
@@ -24,7 +24,7 @@ export default function AdminShopComponent() {
   const handleDelete = async (shopItem) => {
     const updatedShopItems = shopItems.filter((t) => t._id !== shopItem._id);
     const res = await axios.delete(
-      `http://localhost:4000/api/shop/${shopItem._id}`,
+      `https://fyp-project-be.onrender.com/api/shop/${shopItem._id}`,
       {
         headers,
       }

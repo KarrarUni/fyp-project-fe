@@ -13,7 +13,7 @@ export default function ShopComponent(props) {
   const [shopItems, setShopItems] = React.useState([]);
 
   const fetchShopItems = async () => {
-    const res = await axios.get("http://localhost:4000/api/shop", {
+    const res = await axios.get("https://fyp-project-be.onrender.com/api/shop", {
       headers,
     });
     if (res.status === 200) {

@@ -43,7 +43,7 @@ export default function AddTicketFormComponent() {
     setUploading(true);
     const fileData = new FormData();
     fileData.append("file", event.target.files[0]);
-    const res = await axios.post("http://localhost:4000/api/upload", fileData, {
+    const res = await axios.post("https://fyp-project-be.onrender.com/api/upload", fileData, {
       headers: {
         authorization: "Bearer " + token,
       },
@@ -75,7 +75,7 @@ export default function AddTicketFormComponent() {
     console.log(id);
     if (id) {
       const res = await axios.put(
-        "http://localhost:4000/api/ticket/" + id,
+        "https://fyp-project-be.onrender.com/api/ticket/" + id,
         formData,
         {
           headers: {
@@ -91,7 +91,7 @@ export default function AddTicketFormComponent() {
       }
     } else {
       const res = await axios.post(
-        "http://localhost:4000/api/ticket/create",
+        "https://fyp-project-be.onrender.com/api/ticket/create",
         formData,
         {
           headers: {
@@ -120,7 +120,7 @@ export default function AddTicketFormComponent() {
   };
 
   const fetchTicketDetails = async () => {
-    const res = await axios.get(`http://localhost:4000/api/ticket/${id}`, {
+    const res = await axios.get(`https://fyp-project-be.onrender.com/api/ticket/${id}`, {
       headers: {
         authorization: "Bearer " + token,
       },

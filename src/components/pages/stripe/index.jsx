@@ -31,7 +31,7 @@ const CheckoutForm = () => {
       console.log("[error]", error);
     } else {
       const response = await fetch(
-        "http://localhost:4000/api/stripe/create-payment-intent",
+        "https://fyp-project-be.onrender.com/api/stripe/create-payment-intent",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

@@ -36,7 +36,7 @@ export default function AdminViewUsersComponent() {
 
 
   const fetchOrderDetails = async () => {
-    const res = await axios.get("http://localhost:4000/api/user/", {
+    const res = await axios.get("https://fyp-project-be.onrender.com/api/user/", {
       headers,
     });
     if (res.status === 200) {
@@ -46,7 +46,7 @@ export default function AdminViewUsersComponent() {
 
   const deleteUser = async (user) => {
     const res = await axios.delete(
-      "http://localhost:4000/api/user/" + user._id,
+      "https://fyp-project-be.onrender.com/api/user/" + user._id,
       {
         headers,
       }

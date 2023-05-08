@@ -29,7 +29,7 @@ export default function ShopItemDetailsComponent() {
 
   React.useEffect(() => {
     const fetchShopItemDetails = async () => {
-      const res = await axios.get(`http://localhost:4000/api/shop/${id}`, {
+      const res = await axios.get(`https://fyp-project-be.onrender.com/api/shop/${id}`, {
         headers: {
           authorization: "Bearer " + token,
         },

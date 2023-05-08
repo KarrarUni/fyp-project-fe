@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:4000/api";
+const baseURL = "https://fyp-project-be.onrender.com/api";
 const token = localStorage.getItem("auth-token") || null;
 
 // instanceWithToken is used for requests that need the token

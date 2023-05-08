@@ -47,7 +47,7 @@ function ReviewDetails({ data, onSubmit }) {
       toastr.error(error.message);
     } else {
       const response = await fetch(
-        "http://localhost:4000/api/stripe/create-payment-intent",
+        "https://fyp-project-be.onrender.com/api/stripe/create-payment-intent",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -80,7 +80,7 @@ function ReviewDetails({ data, onSubmit }) {
   const handleOrderSubmit = async () => {
     const {first_name, last_name, ...shippingDetail} = shippingDetails;
     const res = await axios.post(
-      "http://localhost:4000/api/book",
+      "https://fyp-project-be.onrender.com/api/book",
       { cartItems, userId: decoded.id, shippingDetail },
       {
         headers,

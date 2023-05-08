@@ -31,7 +31,7 @@ export default function ViewBookingComponent() {
   };
 
   const fetchOrderDetails = async () => {
-    const res = await axios.get("http://localhost:4000/api/book", { headers });
+    const res = await axios.get("https://fyp-project-be.onrender.com/api/book", { headers });
     if (res.status === 200) {
       res.data.forEach((data) => {
         console.log("res.data: ", res.data);

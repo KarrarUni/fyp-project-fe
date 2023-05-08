@@ -7,14 +7,14 @@ export default function AdminDashboardCards() {
   const [revenue, setRevenue] = React.useState({});
 
   const fetchUserStats = async () => {
-    const res = await axios.get("http://localhost:4000/api/stats/users");
+    const res = await axios.get("https://fyp-project-be.onrender.com/api/stats/users");
     if (res.status === 200) {
       setUsers(res.data);
     }
   };
 
   const fetchRevenue = async () => {
-    const res = await axios.get("http://localhost:4000/api/stats/revenue");
+    const res = await axios.get("https://fyp-project-be.onrender.com/api/stats/revenue");
     if (res.status === 200) {
       setRevenue(res.data);
       console.log("res.data: ", res.data);
