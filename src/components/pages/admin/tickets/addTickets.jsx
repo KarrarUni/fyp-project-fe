@@ -72,7 +72,6 @@ export default function AddTicketFormComponent() {
       setErrors(newErrors);
       return;
     }
-    console.log(id);
     if (id) {
       const res = await axios.put(
         "https://fyp-project-be.onrender.com/api/ticket/" + id,

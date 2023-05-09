@@ -59,8 +59,7 @@ const LayoutComponent = () => {
                 <AdminLayout>
                   <Routes>
                     <Route path="tickets" element={<AdminTicketsComponent />} />
-                    <Route path="news/add" element={<AddNewComponent />} />
-                    <Route path="news/edit/:id" element={<AddNewComponent />} />
+                    
 
                     <Route
                       path="tickets/add"
@@ -80,6 +79,9 @@ const LayoutComponent = () => {
                     />
                     <Route path="profile/:id" element={<ProfileComponent />} />
                     <Route path="news" element={<NewsComponent />} />
+                    <Route path="news/:id" element={<ViewNewsPage />} />
+                    <Route path="news/add" element={<AddNewComponent />} />
+                    <Route path="news/edit/:id" element={<AddNewComponent />} />
                     <Route path="/" element={<AdminDashboardCards />} />
                   </Routes>
                 </AdminLayout>

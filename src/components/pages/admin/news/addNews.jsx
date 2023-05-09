@@ -62,7 +62,6 @@ export default function AddNewsComponent() {
             newErrors[key] = "This field is required";
         }
     });
-    console.log('formData: ', formData);
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);

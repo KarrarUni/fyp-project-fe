@@ -34,7 +34,6 @@ export default function ViewBookingComponent() {
     const res = await axios.get("https://fyp-project-be.onrender.com/api/book", { headers });
     if (res.status === 200) {
       res.data.forEach((data) => {
-        console.log("res.data: ", res.data);
         data["customerName"] = data.user.first_name + " " + data.user.last_name;
         data["items"] = data.products.concat(data.tickets);
       });

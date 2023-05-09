@@ -23,7 +23,6 @@ const ViewNewsPage = () => {
   useEffect(() => {
     const fetchNews = async () => {
       const result = await axios.get("https://fyp-project-be.onrender.com/api/news/" + id);
-      console.log("result: ", result);
       setNews(result.data);
     };
     fetchNews();
@@ -35,7 +34,6 @@ const ViewNewsPage = () => {
   }, []);
 
   const handleEdit = (id) => {
-    console.log(`Edit article with id ${id}`);
     navigate(`/admin/news/edit/${id}`);
   };
 

@@ -17,7 +17,6 @@ export default function AdminDashboardCards() {
     const res = await axios.get("https://fyp-project-be.onrender.com/api/stats/revenue");
     if (res.status === 200) {
       setRevenue(res.data);
-      console.log("res.data: ", res.data);
     }
   };
 
