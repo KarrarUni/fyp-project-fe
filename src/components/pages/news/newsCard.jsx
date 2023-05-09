@@ -34,9 +34,7 @@ export default function NewsCard(news) {
         ></div>
         <div className="article-title">{news.data.title}</div>
         <div className="article-details">
-          <span>
-            {timeSinceLastUpdated(news.data.publishedAt).toUpperCase()}
-          </span>
+          
           <span className="text-muted"> By: {news.data.source.name}</span>
         </div>
         <div className="article-details">
