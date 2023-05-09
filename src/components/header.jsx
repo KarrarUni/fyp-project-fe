@@ -109,7 +109,7 @@ function Header(props) {
             />
           </div>
           <div className="main_navigation">
-            {setNavigation.map((item, i) => {
+            {!role==="admin" && setNavigation.map((item, i) => {
               // check if the current item is the login link and the user is logged in
               if (
                 (item.title === "LOGIN" || item.title === "JOIN") &&
