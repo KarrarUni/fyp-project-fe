@@ -10,20 +10,33 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import jwtDecode from "jwt-decode";
 import toastr from "toastr";
-import { Card, CardContent, Typography } from "@mui/material";
 import * as React from "react";
-import axios from "axios";
 
 export default function AdminLayout({ children }) {
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    const token = localStorage.getItem("auth-token");
+    const decodedToken = token ? jwtDecode(token) : "";
+    if (decodedToken.role !== "admin") {
+      toastr.warning("You are not authorized to access this page");
+      navigate("/login");
+    }
+
+    if (decodedToken.role === "admin") {
+      navigate("/admin", { replace: true });
+    } else {
+      navigate("/login", { replace: true });
+    }
+  }, []);
+
   return (
     <Grid container>
       <Grid item xs={2}>
         <Sidebar />
       </Grid>
       <Grid item xs={10}>
-        <Content>
-         {children}
-        </Content>
+        <Content>{children}</Content>
       </Grid>
     </Grid>
   );

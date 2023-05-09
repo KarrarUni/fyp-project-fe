@@ -8,6 +8,7 @@ import Header from "./header";
 import AdminLayout from "./pages/admin/admin";
 import AdminDashboardCards from "./pages/admin/adminDashboardCards";
 import AdminViewBookings from "./pages/admin/bookings/bookings";
+import AddNewComponent from "./pages/admin/news/addNews";
 import AddShopFormComponent from "./pages/admin/Shop/addShopItem";
 import AdminShopComponent from "./pages/admin/Shop/shop";
 import AddTicketFormComponent from "./pages/admin/tickets/addTickets";
@@ -15,6 +16,7 @@ import AdminTicketsComponent from "./pages/admin/tickets/tickets";
 import AdminViewUsersComponent from "./pages/admin/users/users";
 import HomeComponent from "./pages/HomeComponent";
 import NewsComponent from "./pages/news/news";
+import ViewNewsPage from "./pages/news/newsDetails";
 import ProfileComponent from "./pages/profile/profile";
 import StripePayments from "./pages/stripe";
 import ViewBookingComponent from "./pages/users/bookings/booking";
@@ -57,6 +59,9 @@ const LayoutComponent = () => {
                 <AdminLayout>
                   <Routes>
                     <Route path="tickets" element={<AdminTicketsComponent />} />
+                    <Route path="news/add" element={<AddNewComponent />} />
+                    <Route path="news/edit/:id" element={<AddNewComponent />} />
+
                     <Route
                       path="tickets/add"
                       element={<AddTicketFormComponent />}
@@ -92,6 +97,7 @@ const LayoutComponent = () => {
             element={<LoginComponent onDataUpdate={handleRoleChange} />}
           />
           <Route path="/news" element={<NewsComponent />} />
+          <Route path="/news/:id" element={<ViewNewsPage />} />
           <Route
             path="/logout"
             element={<LogoutComponent onDataUpdate={handleRoleChange} />}

@@ -3,11 +3,15 @@ import axios from "axios";
 import NewsCard from "./newsCard";
 import "./news.css";
 import { TextField, Typography } from "@mui/material";
+import jwtDecode from "jwt-decode";
+import { useNavigate } from "react-router-dom";
 
 export default function NewsComponent(props) {
   const [news, setNews] = useState([]);
   const [search, setSearch] = useState("");
   const baseUrl = "https://fyp-project-be.onrender.com/api/news";
+  const [role, setRole] = useState("user");
+  const navigate = useNavigate();
 
   const getNews = () => {
     const url = search ? `${baseUrl}?${search}` : baseUrl;
@@ -29,11 +33,26 @@ export default function NewsComponent(props) {
   };
 
   useEffect(() => {
+    const token = localStorage.getItem("auth-token");
+    const decodedToken = token ? jwtDecode(token) : "";
+    if (decodedToken.role === "admin") {
+      setRole("admin");
+    }
     getNews();
   }, []);
 
   return (
     <>
+      {role === "admin" && (
+        <div className="d-flex mx-3 justify-content-end">
+          <button
+            className="btn btn-primary"
+            onClick={() => navigate("/admin/news/add")}
+          >
+            Add News
+          </button>
+        </div>
+      )}
       <div className={!props.data ? "container" : "container-fluid"}>
         {!props.data && (
           <div className="d-flex justify-content-between align-items-center mb-5">
