@@ -92,15 +92,15 @@ export default function AdminViewUsersComponent() {
               <TableRow key={user._id}>
                 <TableCell>{i + 1}</TableCell>
                 <TableCell>
-                  {user.first_name} {user.last_name}
+                  {user?.first_name} {user?.last_name}
                 </TableCell>
-                <TableCell>{user.email}</TableCell>
-                <TableCell>{user.phone}</TableCell>
+                <TableCell>{user?.email}</TableCell>
+                <TableCell>{user?.phone}</TableCell>
                 <TableCell>
                   {moment(user.createdAt).format("MM/DD/YYYY hh:mm a")}
                 </TableCell>
-                <TableCell>{user.date_of_birth.slice(0,10)}</TableCell>
-                <TableCell>{user.gender}</TableCell>
+                <TableCell>{user?.date_of_birth.slice(0,10) ?? ''}</TableCell>
+                <TableCell>{user?.gender}</TableCell>
                 <TableCell>
                   <Tooltip title="Delete user" placement="top">
                     <IconButton
