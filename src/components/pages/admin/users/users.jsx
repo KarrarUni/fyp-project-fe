@@ -99,7 +99,7 @@ export default function AdminViewUsersComponent() {
                 <TableCell>
                   {moment(user.createdAt).format("MM/DD/YYYY hh:mm a")}
                 </TableCell>
-                <TableCell>{user?.date_of_birth.slice(0,10) ?? ''}</TableCell>
+                <TableCell>{user?.date_of_birth?.slice(0,10) ?? ''}</TableCell>
                 <TableCell>{user?.gender}</TableCell>
                 <TableCell>
                   <Tooltip title="Delete user" placement="top">
