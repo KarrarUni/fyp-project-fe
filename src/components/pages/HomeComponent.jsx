@@ -87,8 +87,6 @@ export default function HomeComponent(props) {
     checkUserSession();
     if (role === "admin") {
       navigate("/admin", { replace: true });
-    } else {
-      navigate("/login", { replace: true });
     }
   }, []);
   const handleNavigation = (path) => {
