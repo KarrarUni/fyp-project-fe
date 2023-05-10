@@ -1,5 +1,6 @@
+import jwtDecode from "jwt-decode";
 import React, { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import ProtectedRoutes from "../core/protected-routes";
 import LoginComponent from "./auth/login";
 import LogoutComponent from "./auth/logout";
@@ -31,6 +32,7 @@ const LayoutComponent = () => {
   const [userRole, setRole] = useState("");
   const [showCart, setShowCart] = useState(false);
   const [updateCart, setUpdateCart] = useState(false);
+  const navigate = useNavigate();
 
   function handleRoleChange(role) {
     setRole(role);
@@ -43,6 +45,14 @@ const LayoutComponent = () => {
   function handleAddToCart(cart) {
     setUpdateCart(cart);
   }
+
+  React.useEffect(() => {
+    const token = localStorage.getItem("auth-token");
+    const decodedToken = token ? jwtDecode(token) : "";
+    if (decodedToken.role === "admin") {
+      navigate("/admin", { replace: true });
+    }
+  }, []);
 
   const MemoizedHeader = React.memo(Header);
 

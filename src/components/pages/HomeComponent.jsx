@@ -85,9 +85,6 @@ export default function HomeComponent(props) {
     fetchTickets();
     fetchShopItems();
     checkUserSession();
-    if (role === "admin") {
-      navigate("/admin", { replace: true });
-    }
   }, []);
   const handleNavigation = (path) => {
     navigate(path);
