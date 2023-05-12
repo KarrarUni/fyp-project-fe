@@ -121,7 +121,7 @@ export default function HomeComponent(props) {
             paragraph
             className="animate__animated animate__fadeInRight "
           >
-            Sign up to take purchase merchandise and book match tickets now.
+            Check out the latest football news or purchase match tickets for our upcoming fixtures!
             
           </Typography>
           <Stack
@@ -177,9 +177,7 @@ export default function HomeComponent(props) {
             style={{ fontFamily: "Anton", fontWeight: "normal" }}
             className="animate__animated animate__fadeInRight "
           >
-            Register with LFC to win amazing prizes, watch FREE videos, listen
-            to live commentary, get the official Club newsletter and experience
-            the all-new eMagazine
+            Register now to become part of the team!
           </Typography>
           <Stack
             sx={{ pt: 4 }}
@@ -242,10 +240,7 @@ export default function HomeComponent(props) {
             }}
           />
           <Typography variant="body1" textAlign={"center"}>
-            The vision of a champion is someone who is bent over, drenched in
-            sweat, at the point of exhaustion when no one else is watching. -
-            Anson Dorrance, former U.S. Women's National Team coach and
-            University of North Carolina women's soccer coach.
+          Winning- that's the most important thing to me. It's as simple as that. - Cristiano Ronaldo
           </Typography>
           <FormatQuoteIcon
             style={{

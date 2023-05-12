@@ -78,7 +78,7 @@ export default function NewsComponent(props) {
           {news.length ? (
             news.map((news, i) => <NewsCard data={news} key={i} />)
           ) : (
-            <h5 className="text-muted">Loading...</h5>
+            <h5 className="text-muted">{search.length && news.length === 0 ? 'No news found' : 'Loading'}  </h5>
           )}
         </div>
       </div>

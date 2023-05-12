@@ -9,12 +9,9 @@ const TestimonialQuotes = () => {
         backgroundColor: "#1565c0",
       }}
     >
-      <div className="container">
-        <Grid container spacing={1}>
+      <div className="container d-flex justify-content-center">
           <Grid
             item
-            xs={12}
-            md={6}
             sx={{
               color: "#fff",
             }}
@@ -22,10 +19,15 @@ const TestimonialQuotes = () => {
             <CardMedia
               component="img"
               alt="green iguana"
-              image="https://tickets.tygit.com/group-images/list-5568.png"
+              style={{
+                maxWidth: '300px',
+                maxHeight: '300px',
+                margin: '50px 0'
+              }}
+              image="https://firebasestorage.googleapis.com/v0/b/kayrarr-14eac.appspot.com/o/uploads%2FBecktonFC.png?alt=media&token=f24d8efa-847a-4c3c-a322-9b5371c28434"
             />
           </Grid>
-          <Grid
+          {/* <Grid
             item
             xs={12}
             md={6}
@@ -59,8 +61,7 @@ const TestimonialQuotes = () => {
                 color: "#fff",
               }}
             />
-          </Grid>
-        </Grid>
+          </Grid> */}
       </div>
     </div>
   );
