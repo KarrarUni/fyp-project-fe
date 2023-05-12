@@ -55,7 +55,7 @@ export default function TicketCard({
 
             <Grid item xs={12} sm={6}>
               <Typography variant="body2" color="text.secondary">
-                Price: {ticket.price} $
+                Price: {ticket.price} £
               </Typography>
             </Grid>
             <Grid item xs={12} sm={6}>
