@@ -111,7 +111,7 @@ export default function TicketCardDerailsComponent() {
               fontWeight: "bold",
             }}
           >
-            Price: {data.price} $
+            Price: {data.price} £
           </Typography>
 
           <Button
