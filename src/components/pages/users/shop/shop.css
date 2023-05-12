@@ -3,6 +3,7 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)) !important;
+  justify-items:center;
 }
 .product_card {
   border: none !important;
