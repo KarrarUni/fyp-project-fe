@@ -24,7 +24,7 @@ export default function ShopItemCard({
       <div className="card-body">
         <div>
           <div className="font-lg fw-bold">{shopItem.item}</div>
-          <h4 className="fw-boldest pm-blue mt-1">$ {shopItem.price}</h4>
+          <h4 className="fw-boldest pm-blue mt-1">£ {shopItem.price}</h4>
         </div>
         <div className="d-flex justify-content-end align-items-start">
           <Button
