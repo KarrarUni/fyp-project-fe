@@ -93,7 +93,7 @@ export default function ShopItemDetailsComponent() {
             }}
             className="pm-blue"
           >
-            Price: {data.price} $
+            Price: {data.price} £
           </Typography>
 
           <Button
