@@ -101,7 +101,7 @@ function CartComponent(props) {
         }}
       >
         <Typography variant="h6" sx={{ fontWeight: "bold" }} component="div">
-          Total Price: ${totalPrice}
+          Total Price: £{totalPrice}
         </Typography>
         <Button
           variant="contained"
@@ -136,7 +136,7 @@ function CartComponent(props) {
                 <AddCircleIcon />
               </IconButton>
               <Typography variant="body2" color="text.secondary">
-                Total: ${item.price * item.quantity}
+                Total: £{item.price * item.quantity}
               </Typography>
             </CardContent>
           </Card>

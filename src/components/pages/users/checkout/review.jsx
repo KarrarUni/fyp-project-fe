@@ -134,7 +134,7 @@ function ReviewDetails({ data, onSubmit }) {
               Quantity ({cart?.quantity})
             </Typography>
             <Typography variant="body2">
-              {cart?.price * cart?.quantity} $
+              {cart?.price * cart?.quantity} £
             </Typography>
           </ListItem>
         ))}

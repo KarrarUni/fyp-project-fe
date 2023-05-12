@@ -265,7 +265,7 @@ export default function AdminShowBookingsComponent() {
                               )}
                             </Typography>
                             <Typography variant="body1" gutterBottom>
-                              Ticket Amount: {ticket.ticket.price}
+                              Ticket Amount: {ticket.ticket.price} £
                             </Typography>
                             <Typography variant="body1" gutterBottom>
                               Ticket Quantity: {ticket.quantity}
@@ -273,7 +273,7 @@ export default function AdminShowBookingsComponent() {
                           </Paper>
                           <Typography variant="h6" gutterBottom sx={{ mt: 1 }}>
                             Total : {ticket.quantity} x {ticket.ticket.price} ={" "}
-                            ${ticket.quantity * ticket.ticket.price}
+                            £{ticket.quantity * ticket.ticket.price}
                           </Typography>
                         </div>
                       ))}
@@ -301,15 +301,15 @@ export default function AdminShowBookingsComponent() {
                               )}
                             </Typography>
                             <Typography variant="body1" gutterBottom>
-                              Price: {product.product.price}
-                            </Typography>
+                              Price: {product.product.price} £
+                            </Typography> 
                             <Typography variant="body1" gutterBottom>
                               Quantity: {product.quantity}
                             </Typography>
                           </Paper>
                           <Typography variant="h6" gutterBottom sx={{ mt: 1 }}>
                             Total : {product.quantity} x {product.product.price}{" "}
-                            = ${product.quantity * product.product.price}
+                            = £{product.quantity * product.product.price}
                           </Typography>
                         </div>
                       ))}
